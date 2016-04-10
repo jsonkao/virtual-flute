@@ -4,12 +4,12 @@ var canvas = document.createElement('canvas'),
     W,H,
     key = [];
 canvas.tabIndex = 0;
-canvas.width = W = 600;
-canvas.height = H = 60;
+canvas.width = W = 300;
+canvas.height = H = 240;
 canvas.style.position = "relative";
 canvas.style.left = "40%";
 canvas.style.border = '1px solid #1abc9c';
-ctx.font = 'bold 12px Open Sans';
+ctx.font = 'normal 48px Open Sans';
 ctx.textBaseline = 'top';
 ctx.textAlign = 'center';
 document.body.appendChild(canvas);
