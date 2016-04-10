@@ -3,12 +3,11 @@ var canvas = document.createElement('canvas'),
     ctx = canvas.getContext('2d'),
     W,H,
     key = [];
+canvas.id = 'canvas';
 canvas.tabIndex = 0;
 canvas.width = W = 300;
 canvas.height = H = 240;
 canvas.style.position = "relative";
-canvas.style.left = "40%";
-canvas.style.border = '1px solid #1abc9c';
 ctx.font = 'normal 48px Open Sans';
 ctx.textBaseline = 'top';
 ctx.textAlign = 'center';
