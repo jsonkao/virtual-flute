@@ -8,7 +8,7 @@ canvas.tabIndex = 0;
 canvas.width = W = 300;
 canvas.height = H = 240;
 canvas.style.position = "relative";
-ctx.font = 'normal 48px Open Sans';
+ctx.font = "48px Open Sans";
 ctx.textBaseline = 'top';
 ctx.textAlign = 'center';
 document.body.appendChild(canvas);
@@ -77,35 +77,35 @@ function pauseAudio(audio) {
         if (thumb&&keyFingering([68,83,74,75,76])) { 
             t = 'm-D';
             playAudio(t);
-            ctx.fillText(t,50,10);
+            ctx.fillText(t,canvas.width/2,10);
         } else if (thumb&&keyFingering([70,68,83,74,75])) { 
             t = 'm-E';
             playAudio(t);
-            ctx.fillText(t,50,10);
+            ctx.fillText(t,canvas.width/2,10);
         } else if (thumb&&keyFingering([70,68,83,74])) { 
             t = 'm-F';
             playAudio(t);
-            ctx.fillText(t,50,10);
+            ctx.fillText(t,canvas.width/2,10);
         } else if (thumb&&keyFingering([70,68,83,76])) { 
             t = 'm-F#Gb';
-            ctx.fillText(t,50,10);
+            ctx.fillText(t,canvas.width/2,10);
         } else if (thumb&&keyFingering([70,68,83,65])) { 
             t = 'm-G#/Ab';
-            ctx.fillText(t,50,10);
+            ctx.fillText(t,canvas.width/2,10);
         } else if (thumb&&keyFingering([70,68,83])) { 
             t = 'm-G';
             playAudio(t);
-            ctx.fillText(t,50,10);
+            ctx.fillText(t,canvas.width/2,10);
         } else if (thumb&&keyFingering([70,68])) { 
             t = 'm-A';
             playAudio(t);
-            ctx.fillText(t,50,10);
+            ctx.fillText(t,canvas.width/2,10);
         } else if (thumb&&keyFingering([70,74])) { 
             t = 'm-A#Bb';
-            ctx.fillText(t,50,10);
+            ctx.fillText(t,canvas.width/2,10);
         } else if (thumb&&keyFingering([70])) { 
             t = 'm-B';
-            ctx.fillText(t,50,10);
+            ctx.fillText(t,canvas.width/2,10);
         }
     }
     setTimeout(loop,1000/24);
