@@ -7,7 +7,7 @@ canvas.id = 'canvas';
 canvas.tabIndex = 0;
 canvas.width = W = 300;
 canvas.height = H = 240;
-canvas.style.position = "relative";
+canvas.style.position = "absolute";
 ctx.font = "48px Open Sans";
 ctx.textBaseline = 'top';
 ctx.textAlign = 'center';
