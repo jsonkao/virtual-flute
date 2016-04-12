@@ -5,22 +5,17 @@ var canvas = document.createElement('canvas'),
     key = [];
 canvas.id = 'canvas';
 canvas.tabIndex = 0;
-canvas.width = W = 300;
+canvas.width = W = 1000;
 canvas.height = H = 240;
-canvas.style.position = "absolute";
 ctx.font = "48px Open Sans";
 ctx.textBaseline = 'top';
 ctx.textAlign = 'center';
 document.body.appendChild(canvas);
 canvas.focus();
-document.body.onmouseover = function(){
-    canvas.focus();
-}
 
-var playing = []
+var playing = []; // to keep track of notes being played. features start/stop sound
 
-/* 'keydown' and 'keyup' events */
-canvas.onkeydown = canvas.onkeyup = function(e) {
+canvas.onkeydown = canvas.onkeyup = function(e) { // 'keydown' and 'keyup' events 
     var e = e || event;
     key[e.keyCode] = e.type == 'keydown';
     if (e.type == 'keyup') {
@@ -35,19 +30,19 @@ function playAudio(audio) {
     if (!(playing[0] == audio)) {
         playing.push(audio);
     }
-    for (var x in playing){
+    /*for (var x in playing) {
         if (playing[x] != audio) {
             pauseAudio(playing[x]);
         }
+    }*/
+    if (playing[0] != audio) {
+        pauseAudio(playing[0]);
     }
     document.getElementById(audio).play(); 
-    
 } 
 function pauseAudio(audio) {
     document.getElementById(audio).pause();
 }   
-
-/* Images */
 
 /* innerHTML */
 (function loop(){
@@ -110,3 +105,4 @@ function pauseAudio(audio) {
     }
     setTimeout(loop,1000/24);
 })();
+
