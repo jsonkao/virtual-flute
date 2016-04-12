@@ -3,9 +3,9 @@ body {
 }
 
 #canvas {
-    width: 300px;
+    width: 60%;
     height: 240px;
     position: relative;
     font-family: "Open Sans";
-    left: 30%;
+    left: 28%;
 }
