@@ -30,13 +30,10 @@ function playAudio(audio) {
     if (!(playing[0] == audio)) {
         playing.push(audio);
     }
-    /*for (var x in playing) {
+    for (var x in playing) {
         if (playing[x] != audio) {
             pauseAudio(playing[x]);
         }
-    }*/
-    if (playing[0] != audio) {
-        pauseAudio(playing[0]);
     }
     document.getElementById(audio).play(); 
 } 
